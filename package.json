@@ -5,8 +5,8 @@
   "main": "server.js",
 
   "scripts": {
-    "server-install": "npm install",
-    "start": "npm install && node server.js",
+    "install-all": "npm install",
+    "start":"node server.js",
     "server": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   
