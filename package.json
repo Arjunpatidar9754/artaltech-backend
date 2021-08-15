@@ -3,14 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-
   "scripts": {
     "install-all": "npm install",
-    "start":"node server.js",
+    "start": "node server.js",
     "server": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  
-
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean && babel src -d build -s --source-maps --copy-files",
+    "clean": "rm -rf build && mkdir build"
   },
   "keywords": [],
   "author": "",
@@ -43,6 +42,12 @@
     "validator": "^13.6.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "nodemon": "^2.0.12"
+  },
+  "engines": {
+    "node": "12.x"
   }
 }
